@@ -1,7 +1,6 @@
 import { Box, Container, Paper } from "@mui/material";
-import NavigationItems from "../../ui/NavigationItems";
 import "./header.css";
-import Hamburger from "../../ui/Hamburger";
+import Navbar from "../navbar/Navbar";
 
 const Header = () => {
   const navigationItems = [
@@ -52,36 +51,8 @@ const Header = () => {
             <img style={{height: "100%",border: "2px solid black", borderRadius: "50%"}} src="/images/book-my-wheels.webp" alt="Book My Wheels" />
          </Container>
         </Box>
-        <nav style={{width: "45%"}}>
-            <Box sx={
-                {
-                    display: {
-                        xs: "none",
-                        lg: "flex"
-                    },
-                    padding: "10px 25px",
-                    boxSizing: "border-box",
-                    width: "100%",
-                    height: "100%",
-                    justifyContent: "space-between",
-                    alignItems: "center"
-                }
-            }>
-                {navigationItems.map((eachItem) => {
-                    return (
-                    <NavigationItems
-                        key={eachItem.id}
-                        navigationItem={eachItem.item}
-                        route={eachItem.route}
-                    />
-                    );
-                })}
-            </Box>
-            <Box sx={{justifySelf: "flex-end", alignSelf: "center"}}>
-                <Hamburger  navigationTabsArr={navigationItems}/>
 
-            </Box>
-        </nav>
+        <Navbar navigationItems={navigationItems} />
       </Paper>
     </header>
   );

@@ -1,8 +1,12 @@
+import Hero from '../../components/hero/Hero'
 import UnderDev from '../../components/temp/UnderDev'
 
 const Landing = () => {
   return (
-    <UnderDev />
+    <>
+      <Hero />
+      <UnderDev />    
+    </>
   )
 }
 
