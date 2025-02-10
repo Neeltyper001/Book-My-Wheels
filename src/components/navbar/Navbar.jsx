@@ -25,6 +25,7 @@ const Navbar = ({navigationItems}) => {
                         key={eachItem.id}
                         navigationItem={eachItem.item}
                         route={eachItem.route}
+                        display={eachItem.display}
                     />
                     );
                 })}

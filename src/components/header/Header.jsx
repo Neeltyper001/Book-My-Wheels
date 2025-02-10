@@ -7,22 +7,38 @@ const Header = () => {
     {
       id: 1,
       item: "About",
-      route: "about"
+      route: "about",
+      display: {
+        type: "text",
+        style: "none",
+      }
     },
     {
       id: 2,
       item: "Contact",
-      route: "contact"
+      route: "contact",
+      display: {
+        type: "text",
+        style: "none",
+      }
     },
     {
       id: 3,
       item: "Signin",
-      route: "signin"
+      route: "signin",
+      display: {
+        type: "button",
+        style: "outlined",
+      }
     },
     {
       id: 4,
       item: "Signup",
-      route: "signup"
+      route: "signup",
+      display: {
+        type: "button",
+        style: "contained",
+      }
     },
   ];
 
