@@ -4,57 +4,39 @@ import React from "react";
 const Feature = () => {
   return (
     <section>
-      <Box
-        sx={{
-          display: "flex",
-          height: "500px",
-          width: "100%",
-          justifyContent: "space-between",
-          alignItems: "center",
-          position: "relative",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            width: "70%",
-            position: "absolute",
-            left: "0%",
-            opacity: "0.5",
-            zIndex: "2",
-            backgroundColor: "gray",
-          }}
-        >
-          <Typography
-            sx={{
-              typography: {
-                md: "h3",
-              },
-            }}
-          >
-            Why Choose Us ?
-          </Typography>
-          <Typography variant="p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic alias
-            autem minima laborum odit molestiae, voluptates rerum? Reiciendis,
-            vero quod?
-          </Typography>
-        </Box>
+        <Box sx={{display:"flex", position: "relative"}}>  
+          <Box sx={{display: "flex", justifyContent: "center", alignItems: "center" ,flexDirection: "column", width: {
+            xs: "100%",
+            md: "70%",
+          }, height: "500px", gap: "10px",
+            padding: "0px 30px",
+            boxSizing: "border-box",
+          }}>
 
-        <Box sx={{ position: "relative", width: "30%", height: "500px" }}>
-          <Box
-            sx={{
-              position: "absolute",
-            }}
-          >
-            <img
-              src="/images/feature-1.png"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
+              <Typography sx={{fontSize: {xs:"34px", sm:"45px",md: "65px"}, fontWeight: "bolder"}} >Who We Are ?</Typography>
+              <Typography variant="p" sx={{width: {
+                xs: "100%",
+                sm: "70%",
+                lg: "48%",                
+              },
+               display: "flex",
+               justifyContent: "center",
+               alignItems: "center",
+              fontSize: "23px" , lineHeight: {
+                xs: "2rem",
+                lg: "3rem"
+              }}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas asperiores atque facere id delectus quod dolorem quidem fuga, cupiditate consequatur autem animi accusantium optio, esse similique natus incidunt! Nulla, molestias.</Typography>
           </Box>
+
+              <Box sx={{height: "100%", width: "50%" , position: "absolute" , right: "0%" , top:"5%", opacity: "0.5"}}>
+                <img style={{height: "100%", width: "100%" , objectFit: "cover"}} src="/images/feature-1.png" alt="feature-1" />
+              </Box>
+              <Box sx={{height: "100%", width: "50%" , position: "absolute" , left: "0%" , top:"5%", opacity: "0.5"}}>
+                <img style={{height: "100%", width: "100%" , objectFit: "cover"}} src="/images/feature-2.png" alt="feature-1" />
+              </Box>
+
+
         </Box>
-      </Box>
     </section>
   );
 };
