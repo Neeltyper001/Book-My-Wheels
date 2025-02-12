@@ -106,7 +106,7 @@ function Login() {
               </Typography>
               <Button
                 variant="outlined"
-                onClick={()=>{navigate('../register')}}
+                onClick={()=>{navigate('/signup')}}
                 sx={{ border: "3px solid white", color: "white" }}
               >
                 Register
