@@ -6,6 +6,7 @@ import Landing from '../pages/landing/Landing'
 import About from '../pages/about/About.jsx'
 import Contact from '../pages/contact/Contact'
 import PageNotFound from '../pages/NotFound/PageNotFound.jsx'
+import Login from '../pages/login/Login.jsx'
 
 
 const AppRoute = () => {
@@ -15,7 +16,8 @@ const AppRoute = () => {
             <Route path="/" element={<Base />} > 
               <Route index element={<Landing />} />
               <Route path='about' element={<About />} />
-              <Route path='contact' element={<Contact />} />        
+              <Route path='contact' element={<Contact />} />  
+              <Route path='signin'  element={<Login />} />
             </Route> 
             <Route path="*" element={<PageNotFound />} />
         </>
